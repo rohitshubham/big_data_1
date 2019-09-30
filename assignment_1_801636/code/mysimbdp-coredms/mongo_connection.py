@@ -14,5 +14,6 @@ def connectAndInsertRow(valueToBeStored, collectionName = "airbnb"):
     mydict = {"name" : "rohitRaj", "address": "Highway37"}
     current_collection.insert_one(mydict)
 
+# Each topic incoming from the message broker should ideally get inserted into a new collection
 connectAndInsertRow({"name" : "john", "address": "Highway37"}, "customers")
 
