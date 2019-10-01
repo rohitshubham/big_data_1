@@ -1,16 +1,20 @@
 from kafka import KafkaProducer
+import csv
 import time
 
 bootstrap_servers = ['localhost:9092']
-topicName = 'myTopic'
+topicName = 'mysimbdp'
 
 producer = KafkaProducer(bootstrap_servers = bootstrap_servers)
 producer = KafkaProducer()
 
-for i in range(10000000):
-    time.sleep(0.5)
-    text = "Hello World "+ str(i)
-    ack = producer.send(topicName, str.encode(text)) 
-    metadata = ack.get()
-    print(metadata.topic)
-    print(metadata.partition)
+
+with open("../../data/data.csv") as file: 
+    data = file.read()
+    dataRow = data.splitlines()
+    for idx, i in enumerate(dataRow):
+        time.sleep(0.5)
+        ack = producer.send(topicName, str.encode(i))
+        metadata = ack.get()
+        print("Published row " + str(idx) + ".")
+
