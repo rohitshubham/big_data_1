@@ -1,5 +1,7 @@
 import pymongo
 
+# kafka connection strings
+#Strictly internal APIs to call and save data in MongoDB Container
 __connectionString = "mongodb://localhost:27017"
 __databaseName = "mysimbdp-coredms"
 

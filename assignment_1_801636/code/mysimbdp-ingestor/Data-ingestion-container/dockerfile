@@ -1,0 +1,10 @@
+FROM python:3.6
+LABEL maitainer="Rohit Raj" 
+
+COPY ./ app
+
+WORKDIR /app
+
+RUN pip install -r requirements.txt
+
+CMD ["python3", "-u", "./kafka_consumer.py"] 

@@ -5,8 +5,12 @@ from mongo_connection import connectAndInsertRow
 bootstrap_servers = ['localhost:9092']
 topicName = 'mysimbdp'
 
+print("Starting to listen for messages on topic : " + topicName + ". ")    
+
 consumer = KafkaConsumer(topicName, group_id = 'myGroup',bootstrap_servers = bootstrap_servers,
 auto_offset_reset = 'earliest')
+
+print("Successfullt connected to kafka consumer process!")
 
 def getFormattedData(message):
     data = message.split(",")
@@ -31,7 +35,6 @@ def getFormattedData(message):
 
 
 
-    
 try:
     for message in consumer:
         print ("%s:%d:%d: key=%s value=%s" % (message.topic, message.partition,message.offset, message.key,message.value))
