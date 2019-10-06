@@ -78,7 +78,7 @@ Hence, the complete architecture can be seen in the image below (Figure 5):
 ### Specific Answers to Part 1
 
 1. The design and interactions between the components have been explained in the previous section.
-2. As mentioned in the section 2 above, I have used 10 separate containers in total. There are 3 shards each with 2 replicas. There are 3 config servers saving the metadata and 1 query router for querying the contents. Specific details are in the `docker-compose` file in `/code/mysimbdp-coredms/mongo_sharded_docker.yml` location.
+2. As mentioned in the section 2 above, I have used 10 separate containers in total. There are 3 shards each with 2 replicas. There are 3 config servers saving the metadata and 1 query router for querying the contents. Specific details are in the `docker-compose` file in `/code/mysimbdp-coredms/mongo_sharded_docker/docker-compose.yml` location.
 3. The deployment of all the components in **mysimbdp** has been done on containers using `docker` and `docker-compose`. The primary reason for using containers is ease of use and lightweight. For example on my PC(with only 8 Gb of RAM) we are easily able to run more than 15 containers simultaneously, with each having a process level isolation. Moreover, usage of `docker-compose` tool ensured very easy management of sharding and routing in our Database system. TO start this complete DMS, we need only one command :
 ```bash
 sudo docker-compose up  
@@ -87,7 +87,44 @@ This goes on to show how easy it is to start, deploy and manage containers compa
 
 4. My implementation of **mysimbdp-dataingest** uses Kafka as message queue system for ingestion of streaming data. `Kafka` uses a commit-log like structure to save and maintain data in queue. Additionally, each topic in Kafka has partitions to ensure scalability of individual topics. We can easily create multiple clusters of Kafka and connect them to a single broker to scale up horizontally. Companies such as Uber are using this design to scale upto 100 Petabyte per minute on write intensive queues [1]. A single broker of kafka can easily process 821,557 records/sec as evident here [2]. Hence, the **data-ingest** component would be able to scale up very fine by easily attaching more kafka containers to the cluster.
 
-5. My choice for cloud platform would be Google Cloud platform for both cloud infrastructure and cloud storage. The dataset for **mysimbdp** is AirBnB's data. The real value of data is resides with the analytics and Google Cloud platform offers industry's finest machine learning engine and helps engineer build ML models using Google's own open-source Tensorflow Deep learning service. Hence, we will be able to achieve very quick data analytics on our data using google loud platform. Google arguably also offers cheapest cloud storage solution in the market [3][4] and budget is one of the most important considerations while choosing cloud platform.  
+5. My choice for cloud platform would be Google Cloud platform for both cloud infrastructure and cloud storage. The dataset for **mysimbdp** is AirBnB's data. The real value of data is resides with the analytics and Google Cloud platform offers industry's finest machine learning engine and helps engineer build ML models using Google's own open-source Tensorflow Deep learning service. Hence, we will be able to achieve very quick data analytics on our data using google loud platform. Google arguably also offers cheapest cloud storage solution in the market [3][4] and budget is one of the most important considerations while choosing cloud platform. 
+--- 
+
+## Part 2 
+
+1. The database used in the project is MongoDB and it treats the data as collection of documents. Unlike traditional relational databases, Mongo does not enforce any schema structure. This allows for flexibility on how we can treat our data and create suitable data models.  This project has the following structure of data (airbnb data):
+```json
+{
+    "id",
+    "name",
+    "host_id",
+    "host_name",
+    "neighbourhood_group",
+    "neighbourhood",
+    "latitude",
+    "longitude",
+    "room_type",
+    "price",
+    "minimum_nights",
+    "number_of_reviews",
+    "last_review",
+    "reviews_per_month",
+    "calculated_host_listings_count",
+    "availability_365"
+    }
+```
+   The incoming data is in CSV format which is transformed to Mongo's JSON format before being loaded. We are also enforcing the `validationLevel = strict` and `validationAction  = warn` in our existing documents.
+
+2. As described earlier, the database is shared and replicated to provide maximum availability and scalability in an multi-tenant environment. We have 3 shards of data with 2 replicas and 3 config servers. 
+
+> Sharding scheme =  (3 Shards) * (2 replicas) + 3 config servers + query router = 10 containers
+
+
+The mongo provides easy sharding facility and use of `docker-compose` make the starting of shards very easy. The config file for sharding is  in the `docker-compose` file in `/code/mysimbdp-coredms/mongo_sharded_docker/docker-compose.yml` location. 
+
+![Shard_1](./images/sharding_config.png)
+* Fig 5: **Sharding configuration of MongoDB**
+
 
 
 ## Sources
