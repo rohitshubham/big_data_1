@@ -32,7 +32,7 @@ All the incoming data is published on certain _"Topic"_ and consumed on same top
 
 This project deploys Kafka using `docker-compose` and uses `Confluent's` version of docker image. This kafka docker image also has a UI wrapper to easily manage and visualize the kafka streaming.
 
-There is a python script which simulates the incoming data as stream by sending the data to kafka broker at 0.5 sec interval on port `9092`. The topic is `mysimbdp` and it has 133 partitions on multiple clusters(the topic partition distribution is determined internally by kafka in this project). The _Producer_ and _Consumer_ API's of kafka both are served on the same port of broker.
+There is a python script which simulates the incoming data as stream by sending the data to kafka broker at 0.1 sec interval on port `9092`. The topic is `mysimbdp` and it has 133 partitions on multiple clusters(the topic partition distribution is determined internally by kafka in this project). The _Producer_ and _Consumer_ API's of kafka both are served on the same port of broker. Using kafka gives us advantage of high consistency of data. **<u>Meaning that unlike direct loading of data into database, a queue like kafka allows reinsertion of data if there is any temporary failure in our database.</u>** Since our Kafka retains data for a week by default, we can always use strategy to not lose our incoming data even if our database is down for 203 days.   
 
 ![Kafka_1](./images/kafka_start.png)
 * Fig 2: Starting `Confluent's` kafka containers
@@ -125,6 +125,7 @@ The mongo provides easy sharding facility and use of `docker-compose` make the s
 ![Shard_1](./images/sharding_config.png)
 * Fig 5: **Sharding configuration of MongoDB**
 
+  
 ### Performance Testing
 
 #### 1. Data-Ingestor
@@ -169,6 +170,29 @@ The request latency was again very quick with 99.9th percentile being 14ms, 95th
 
 ![cont_10_2](./images/10cont.png)
 * Fig 10: latency on 10 concurrent streams
+
+#### CoreDMS performance
+
+We observed a general delay of 15-20 messages over the consumer statistics in kafka irrespective of whether 1 or 10 concurrent streams were running
+
+![cont_10_3](./images/screen_lag.png)
+* Fig 11: Message delay of 17 during 5 concurrent streams
+
+Since, the messages are inserted into the mongo by the python code, new message is picked from kafka only after last item has been saved into the db. As this lag remained constantly at 15-20 messages, we can safely say that the data into the mongoDB was being inserted at the same rate that it was produced. Hence the values for insertion into our distributed DB will be (for all 1, 5, and 10 streams)
+: 
+> **Avg**: 1ms (Median value from the queue producer's data above) \
+> **Worst Case** : {(15 + 20)/2}*1.0ms = _17.5ms_  
+
+Therefore, we were able to save data into the system between 1ms to 18ms almost even when the number of streams were 10. 
+
+I didn't face the problem of performance during data ingestion due to combination of these two reasons:
+* The scale of data and good hardware: Since i ran the setup on a latest generation i5 and SSD plus 8Gbs of ram, ingesting, processing and loading was very quick. Additionally, running containers have very low memory footprint. 
+* Presence of Kafka as mediator: Kafka queue was able to act as cushion between the originating requests and our database. So our db always received very steady and clear supply of incoming data. 
+
+However, I am certain that if there are around 100+ streams of data, I would start to see some lag between production and consumption. It will be because of hardware limitations and not because of software bottlenecks from Kafka or Sharded mongoDB instances. One quick method to remedy any such lag and failure of requests would be to deploy the code onto some public cloud platforms.  
+
+
+
 
 
 

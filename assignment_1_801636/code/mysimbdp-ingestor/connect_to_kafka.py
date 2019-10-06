@@ -17,7 +17,7 @@ with open("../../data/data.csv") as file:
     data = file.read()
     dataRow = data.splitlines()
     for idx, i in enumerate(dataRow):
-        time.sleep(0.5)
+        time.sleep(0.1)
         ack = producer.send(topicName, str.encode(i))
         metadata = ack.get()
         print("Published row " + str(idx) + ".")
