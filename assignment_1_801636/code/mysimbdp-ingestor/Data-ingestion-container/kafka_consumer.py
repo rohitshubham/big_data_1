@@ -10,7 +10,7 @@ print("Starting to listen for messages on topic : " + topicName + ". ")
 consumer = KafkaConsumer(topicName, group_id = 'myGroup',bootstrap_servers = bootstrap_servers,
 auto_offset_reset = 'earliest')
 
-print("Successfullt connected to kafka consumer process!")
+print("Successfully connected to kafka consumer process!")
 
 def getFormattedData(message):
     data = message.split(",")
@@ -40,5 +40,6 @@ try:
         print ("%s:%d:%d: key=%s value=%s" % (message.topic, message.partition,message.offset, message.key,message.value))
         formattedData = getFormattedData(str(message.value))
         connectAndInsertRow(formattedData)        
-except:
-	continue
+except Exception:
+    pass
+	

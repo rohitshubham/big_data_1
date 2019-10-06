@@ -125,6 +125,51 @@ The mongo provides easy sharding facility and use of `docker-compose` make the s
 ![Shard_1](./images/sharding_config.png)
 * Fig 5: **Sharding configuration of MongoDB**
 
+### Performance Testing
+
+#### 1. Data-Ingestor
+
+The `Confluent's` Kafka wrapper gives us nice UI to measure the response time and throughput. It also gives measure the failed requests. 
+
+We ran the tests on our broker from 1 parallel stream to 10 parallel streams and measured the 1. response time, 2. Failure rate and 3. Throughput in the system. I am presenting the request stream stats of 3 such cases
+
+1. _One parallel stream_ :
+
+There was only one stream of data and the throughput was around 80Kbps (Note: the graphs are in bytes(B) and not bits(b)). The request latency quite high at around 100ms but very soon stabilized to 1-2 ms only. Needless to say there were no failed requests.
+
+![cont_1](./images/cont_2.png)
+* Fig 6: Statistics for ingestion on 1 concurrent request
+
+2. _5 Concurrent streams_
+
+When the concurrent streams were updated to 5, we noticed that the throughput increased to 1.6KB per second. (_An observation_ : Since, we were duplicating the data by sending same data over different streams, I assume Kafka should be using it's zero copy mechanism [5] to prevent duplication of data. Rather it is just increasing the offset when same data is coming into the queue.)
+
+![cont_5_3](./images/cont_5_streams.png)
+* Fig 7: Throughput on 5 parallel streams
+
+The request latency showed a very slight increase with 99.9 th percentile at 31ms ,99th percentile at 3.0ms, 95th percentile at 2 ms. The median request time however, was still the same at 1ms. Again, I observed no failed requests.
+
+![cont_5_1](./images/5streams.png)
+* Fig 8: Statistics for ingestion on 5 concurrent requests
+
+![cont_5_2](./images/5containers.png)
+* Fig 9: Latency on 5 concurrent requests
+
+
+3. _10 concurrent streams_
+
+When the number of concurrent requests was increased to 10, the throughput almost doubled to 3.4KB per second.
+
+
+![cont_10_1](./images/10containers.png)
+* Fig 10: Data throughput on 10 streams
+
+The request latency was again very quick with 99.9th percentile being 14ms, 95th being 2.0ms and median still at 1.0ms. We again observed no failed requests at all.
+
+
+![cont_10_2](./images/10cont.png)
+* Fig 10: latency on 10 concurrent streams
+
 
 
 ## Sources
@@ -135,5 +180,7 @@ The mongo provides easy sharding facility and use of `docker-compose` make the s
 [3] [The cheapest cloud storage options in 2018](https://www.expertreviews.co.uk/storage/1407838/cheapest-cloud-storage)
 
 [4] [The Best Cloud Storage Services of 2019](https://lifehacker.com/google-one-is-now-open-for-everyone-but-is-it-a-good-d-1826049257)
+
+[5] [Here’s what makes Apache Kafka so fast](https://www.freecodecamp.org/news/what-makes-apache-kafka-so-fast-a8d4f94ab145/)
 
 
