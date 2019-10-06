@@ -3,10 +3,10 @@
 ### CS-E4640 Big data platforms 
 #### Rohit Raj - 801636
 ---
-
+## Part 1
 ### Design of the project
 
-The Simple big data platform designed has 3 basic components:
+This project was created to be write-intensive in nature and hence was designed with the use-case of low latency concurrent and distributed write operations. The Simple big data platform designed has 3 basic components:
 
 ### 1. Mysimbdp-coredms
 #### MongoDB: 
@@ -63,6 +63,15 @@ Some of the sample API's available to the user to read and update data:
 * _/updateHostName/\<hostID\>/\<newHostName\>_ : This is a `POST` endpoint and is used for updating the hostname using the hostId.
 
 It is important to note here that this is the _only_ client facing app and can be scaled by spawning new containers depending on the load value (Automatic spawning of new containers is not implemented). As mongoDb natively supports concurrency along with the sharding and a good (and uniform!) shard key (hashed in most cases), it will easily distribute the read-loads on multiple shards. This will allow horizontal scalability and multi-tenant design on our _mysimplebdp-Daas_. 
+
+![Daas_1](./images/daas_1.png)
+* Fig 4: Sample mysimpbdp-DAAS request via postman
+
+Hence, the complete architecture can be seen in the image below (Figure 5):
+
+![Daas_1](./images/big_data_1.png)
+* Fig 5: **MySimBDP architecture**
+
 
 
 
