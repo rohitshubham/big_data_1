@@ -1,0 +1,49 @@
+{"log":"2019/10/07 16:09:33 Starting registrator v7 ...\n","stream":"stderr","time":"2019-10-07T16:09:33.201342093Z"}
+{"log":"2019/10/07 16:09:33 Using consul adapter: consul://localhost:8500\n","stream":"stderr","time":"2019-10-07T16:09:33.201383054Z"}
+{"log":"2019/10/07 16:09:33 Connecting to backend (0/0)\n","stream":"stderr","time":"2019-10-07T16:09:33.201390688Z"}
+{"log":"2019/10/07 16:09:33 consul: current leader  127.0.0.1:8300\n","stream":"stderr","time":"2019-10-07T16:09:33.202350954Z"}
+{"log":"2019/10/07 16:09:33 Listening for Docker events ...\n","stream":"stderr","time":"2019-10-07T16:09:33.202361093Z"}
+{"log":"2019/10/07 16:09:33 Syncing services on 1 containers\n","stream":"stderr","time":"2019-10-07T16:09:33.203855721Z"}
+{"log":"2019/10/07 16:09:33 ignored: 6a7f236e65ba no published ports\n","stream":"stderr","time":"2019-10-07T16:09:33.205163968Z"}
+{"log":"2019/10/07 16:09:33 ignored: cb8f2398cf39 no published ports\n","stream":"stderr","time":"2019-10-07T16:09:33.217021902Z"}
+{"log":"2019/10/07 16:11:30 ignored: 6a7f236e65ba no published ports\n","stream":"stderr","time":"2019-10-07T16:11:30.336665059Z"}
+{"log":"2019/10/07 16:12:31 Starting registrator v7 ...\n","stream":"stderr","time":"2019-10-07T16:12:31.220759922Z"}
+{"log":"2019/10/07 16:12:31 Using consul adapter: consul://localhost:8500\n","stream":"stderr","time":"2019-10-07T16:12:31.220786231Z"}
+{"log":"2019/10/07 16:12:31 Connecting to backend (0/0)\n","stream":"stderr","time":"2019-10-07T16:12:31.220789976Z"}
+{"log":"2019/10/07 16:12:31 consul: current leader  127.0.0.1:8300\n","stream":"stderr","time":"2019-10-07T16:12:31.222399489Z"}
+{"log":"2019/10/07 16:12:31 Listening for Docker events ...\n","stream":"stderr","time":"2019-10-07T16:12:31.222418544Z"}
+{"log":"2019/10/07 16:12:31 Syncing services on 1 containers\n","stream":"stderr","time":"2019-10-07T16:12:31.223676405Z"}
+{"log":"2019/10/07 16:12:31 ignored: 6a7f236e65ba no published ports\n","stream":"stderr","time":"2019-10-07T16:12:31.224870494Z"}
+{"log":"2019/10/07 16:12:31 ignored: cb8f2398cf39 no published ports\n","stream":"stderr","time":"2019-10-07T16:12:31.236482824Z"}
+{"log":"2019/10/07 16:12:44 ignored: 1a17ecd119d7 port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:44.886340926Z"}
+{"log":"2019/10/07 16:12:45 ignored: f251a66d6810 port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:45.071208805Z"}
+{"log":"2019/10/07 16:12:45 ignored: b76fac9ea258 port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:45.125460688Z"}
+{"log":"2019/10/07 16:12:45 ignored: a69f865dbf74 port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:45.248616819Z"}
+{"log":"2019/10/07 16:12:45 ignored: 9e17b655803e port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:45.923705799Z"}
+{"log":"2019/10/07 16:12:46 ignored: 299f5b539b9e port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:46.360910366Z"}
+{"log":"2019/10/07 16:12:46 ignored: c2ed255a7fdc port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:46.478442146Z"}
+{"log":"2019/10/07 16:12:46 ignored: 9f062dbddd54 port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:46.537932867Z"}
+{"log":"2019/10/07 16:12:47 ignored: 8ab163c5e190 port 27017 not published on host\n","stream":"stderr","time":"2019-10-07T16:12:47.373491175Z"}
+{"log":"2019/10/07 16:12:48 added: ea1cddd772b7 rohit-X406UAR:mongoshardeddocker_router_1:27017\n","stream":"stderr","time":"2019-10-07T16:12:48.062296086Z"}
+{"log":"2019/10/07 16:14:08 ignored: 6df1d68793c8 port 2888 not published on host\n","stream":"stderr","time":"2019-10-07T16:14:08.442734949Z"}
+{"log":"2019/10/07 16:14:08 added: 6df1d68793c8 rohit-X406UAR:zookeeper:2181\n","stream":"stderr","time":"2019-10-07T16:14:08.457559325Z"}
+{"log":"2019/10/07 16:14:08 ignored: 6df1d68793c8 port 3888 not published on host\n","stream":"stderr","time":"2019-10-07T16:14:08.457623483Z"}
+{"log":"2019/10/07 16:14:09 added: bf9096f6c005 rohit-X406UAR:broker:29092\n","stream":"stderr","time":"2019-10-07T16:14:09.041582354Z"}
+{"log":"2019/10/07 16:14:09 added: bf9096f6c005 rohit-X406UAR:broker:9092\n","stream":"stderr","time":"2019-10-07T16:14:09.053580905Z"}
+{"log":"2019/10/07 16:14:09 added: 05f0af0f192d rohit-X406UAR:schema-registry:8081\n","stream":"stderr","time":"2019-10-07T16:14:09.68367134Z"}
+{"log":"2019/10/07 16:14:10 added: 16b37f965b41 rohit-X406UAR:rest-proxy:8082\n","stream":"stderr","time":"2019-10-07T16:14:10.577184679Z"}
+{"log":"2019/10/07 16:14:10 added: e3026a8c670a rohit-X406UAR:connect:8083\n","stream":"stderr","time":"2019-10-07T16:14:10.600202219Z"}
+{"log":"2019/10/07 16:14:10 ignored: e3026a8c670a port 9092 not published on host\n","stream":"stderr","time":"2019-10-07T16:14:10.600225669Z"}
+{"log":"2019/10/07 16:14:11 added: f8ca69da4dcc rohit-X406UAR:ksql-server:8088\n","stream":"stderr","time":"2019-10-07T16:14:11.441355Z"}
+{"log":"2019/10/07 16:14:12 ignored: f9f63157dc4e no published ports\n","stream":"stderr","time":"2019-10-07T16:14:12.762161606Z"}
+{"log":"2019/10/07 16:14:13 ignored: df50db77db70 no published ports\n","stream":"stderr","time":"2019-10-07T16:14:13.889272602Z"}
+{"log":"2019/10/07 16:14:13 added: ec1b312a5d03 rohit-X406UAR:control-center:9021\n","stream":"stderr","time":"2019-10-07T16:14:13.908153406Z"}
+{"log":"2019/10/07 16:18:46 removed: 16b37f965b41 rohit-X406UAR:rest-proxy:8082\n","stream":"stderr","time":"2019-10-07T16:18:46.99922714Z"}
+{"log":"2019/10/07 16:18:47 removed: ec1b312a5d03 rohit-X406UAR:control-center:9021\n","stream":"stderr","time":"2019-10-07T16:18:47.128703194Z"}
+{"log":"2019/10/07 16:18:57 removed: f8ca69da4dcc rohit-X406UAR:ksql-server:8088\n","stream":"stderr","time":"2019-10-07T16:18:57.554151918Z"}
+{"log":"2019/10/07 16:18:58 removed: e3026a8c670a rohit-X406UAR:connect:8083\n","stream":"stderr","time":"2019-10-07T16:18:58.471522645Z"}
+{"log":"2019/10/07 16:18:59 removed: 05f0af0f192d rohit-X406UAR:schema-registry:8081\n","stream":"stderr","time":"2019-10-07T16:18:59.353628145Z"}
+{"log":"2019/10/07 16:19:04 removed: bf9096f6c005 rohit-X406UAR:broker:29092\n","stream":"stderr","time":"2019-10-07T16:19:04.839850843Z"}
+{"log":"2019/10/07 16:19:04 removed: bf9096f6c005 rohit-X406UAR:broker:9092\n","stream":"stderr","time":"2019-10-07T16:19:04.841848813Z"}
+{"log":"2019/10/07 16:19:05 removed: 6df1d68793c8 rohit-X406UAR:zookeeper:2181\n","stream":"stderr","time":"2019-10-07T16:19:05.738516905Z"}
+{"log":"2019/10/07 16:20:41 removed: ea1cddd772b7 rohit-X406UAR:mongoshardeddocker_router_1:27017\n","stream":"stderr","time":"2019-10-07T16:20:41.077173524Z"}

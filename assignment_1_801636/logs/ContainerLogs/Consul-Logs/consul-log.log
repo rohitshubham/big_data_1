@@ -1,0 +1,517 @@
+{"log":"==\u003e Found address '127.0.0.1' for interface 'lo', setting bind option...\r\n","stream":"stdout","time":"2019-10-07T15:51:28.948099089Z"}
+{"log":"==\u003e Starting Consul agent...\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987097323Z"}
+{"log":"           Version: 'v1.6.1'\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987331856Z"}
+{"log":"           Node ID: 'f7aae20b-c827-351e-6607-650b19b66176'\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987343832Z"}
+{"log":"         Node name: 'rohit-X406UAR'\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987349403Z"}
+{"log":"        Datacenter: 'dc1' (Segment: '\u003call\u003e')\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987353869Z"}
+{"log":"            Server: true (Bootstrap: false)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987358318Z"}
+{"log":"       Client Addr: [0.0.0.0] (HTTP: 8500, HTTPS: -1, gRPC: 8502, DNS: 8600)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987361971Z"}
+{"log":"      Cluster Addr: 127.0.0.1 (LAN: 8301, WAN: 8302)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987367014Z"}
+{"log":"           Encrypt: Gossip: false, TLS-Outgoing: false, TLS-Incoming: false, Auto-Encrypt-TLS: false\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987374962Z"}
+{"log":"\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987378955Z"}
+{"log":"==\u003e Log data will now stream in as it occurs:\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987383572Z"}
+{"log":"\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987387338Z"}
+{"log":"    2019/10/07 15:51:28 [DEBUG] agent: Using random ID \"f7aae20b-c827-351e-6607-650b19b66176\" as node ID\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987391037Z"}
+{"log":"    2019/10/07 15:51:28 [DEBUG] tlsutil: Update with version 1\r\n","stream":"stdout","time":"2019-10-07T15:51:28.987491423Z"}
+{"log":"    2019/10/07 15:51:28 [DEBUG] tlsutil: OutgoingRPCWrapper with version 1\r\n","stream":"stdout","time":"2019-10-07T15:51:28.988235305Z"}
+{"log":"    2019/10/07 15:51:28 [INFO]  raft: Initial configuration (index=1): [{Suffrage:Voter ID:f7aae20b-c827-351e-6607-650b19b66176 Address:127.0.0.1:8300}]\r\n","stream":"stdout","time":"2019-10-07T15:51:28.988629083Z"}
+{"log":"    2019/10/07 15:51:28 [INFO]  raft: Node at 127.0.0.1:8300 [Follower] entering Follower state (Leader: \"\")\r\n","stream":"stdout","time":"2019-10-07T15:51:28.988811973Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] serf: EventMemberJoin: rohit-X406UAR.dc1 127.0.0.1\r\n","stream":"stdout","time":"2019-10-07T15:51:28.988920994Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] serf: EventMemberJoin: rohit-X406UAR 127.0.0.1\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989174746Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] consul: Handled member-join event for server \"rohit-X406UAR.dc1\" in area \"wan\"\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989387947Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] consul: Adding LAN server rohit-X406UAR (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989403507Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] agent: Started DNS server 0.0.0.0:8600 (udp)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989677288Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] agent: Started DNS server 0.0.0.0:8600 (tcp)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989690361Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] agent: Started HTTP server on [::]:8500 (tcp)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989834179Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] agent: Started gRPC server on [::]:8502 (tcp)\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989988405Z"}
+{"log":"    2019/10/07 15:51:28 [INFO] agent: started state syncer\r\n","stream":"stdout","time":"2019-10-07T15:51:28.989998782Z"}
+{"log":"==\u003e Consul agent running!\r\n","stream":"stdout","time":"2019-10-07T15:51:28.990003858Z"}
+{"log":"    2019/10/07 15:51:29 [WARN]  raft: Heartbeat timeout from \"\" reached, starting election\r\n","stream":"stdout","time":"2019-10-07T15:51:29.051497453Z"}
+{"log":"    2019/10/07 15:51:29 [INFO]  raft: Node at 127.0.0.1:8300 [Candidate] entering Candidate state in term 2\r\n","stream":"stdout","time":"2019-10-07T15:51:29.051542115Z"}
+{"log":"    2019/10/07 15:51:29 [DEBUG] raft: Votes needed: 1\r\n","stream":"stdout","time":"2019-10-07T15:51:29.051585443Z"}
+{"log":"    2019/10/07 15:51:29 [DEBUG] raft: Vote granted from f7aae20b-c827-351e-6607-650b19b66176 in term 2. Tally: 1\r\n","stream":"stdout","time":"2019-10-07T15:51:29.051601599Z"}
+{"log":"    2019/10/07 15:51:29 [INFO]  raft: Election won. Tally: 1\r\n","stream":"stdout","time":"2019-10-07T15:51:29.051612957Z"}
+{"log":"    2019/10/07 15:51:29 [INFO]  raft: Node at 127.0.0.1:8300 [Leader] entering Leader state\r\n","stream":"stdout","time":"2019-10-07T15:51:29.051625942Z"}
+{"log":"    2019/10/07 15:51:29 [INFO] consul: cluster leadership acquired\r\n","stream":"stdout","time":"2019-10-07T15:51:29.051809431Z"}
+{"log":"    2019/10/07 15:51:29 [INFO] consul: New leader elected: rohit-X406UAR\r\n","stream":"stdout","time":"2019-10-07T15:51:29.052086102Z"}
+{"log":"    2019/10/07 15:51:29 [INFO] connect: initialized primary datacenter CA with provider \"consul\"\r\n","stream":"stdout","time":"2019-10-07T15:51:29.080581153Z"}
+{"log":"    2019/10/07 15:51:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:51:29.080633744Z"}
+{"log":"    2019/10/07 15:51:29 [INFO] consul: member 'rohit-X406UAR' joined, marking health alive\r\n","stream":"stdout","time":"2019-10-07T15:51:29.080651931Z"}
+{"log":"    2019/10/07 15:51:29 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T15:51:29.285489206Z"}
+{"log":"    2019/10/07 15:51:29 [INFO] agent: Synced node info\r\n","stream":"stdout","time":"2019-10-07T15:51:29.286063401Z"}
+{"log":"    2019/10/07 15:51:29 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T15:51:29.286109019Z"}
+{"log":"    2019/10/07 15:51:30 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T15:51:30.068064564Z"}
+{"log":"    2019/10/07 15:51:30 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T15:51:30.068123584Z"}
+{"log":"    2019/10/07 15:51:31 [DEBUG] tlsutil: OutgoingRPCWrapper with version 1\r\n","stream":"stdout","time":"2019-10-07T15:51:31.053471334Z"}
+{"log":"    2019/10/07 15:51:34 [DEBUG] http: Request GET /v1/catalog/datacenters (706.348µs) from=127.0.0.1:58572\r\n","stream":"stdout","time":"2019-10-07T15:51:34.205286021Z"}
+{"log":"    2019/10/07 15:51:34 [DEBUG] http: Request GET /v1/catalog/datacenters (207.19µs) from=127.0.0.1:58572\r\n","stream":"stdout","time":"2019-10-07T15:51:34.209383299Z"}
+{"log":"    2019/10/07 15:51:34 [DEBUG] http: Request GET /v1/catalog/datacenters (184.302µs) from=127.0.0.1:58572\r\n","stream":"stdout","time":"2019-10-07T15:51:34.270181063Z"}
+{"log":"    2019/10/07 15:51:34 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1 (193.956µs) from=127.0.0.1:58572\r\n","stream":"stdout","time":"2019-10-07T15:51:34.279539823Z"}
+{"log":"    2019/10/07 15:52:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:52:29.053340333Z"}
+{"log":"    2019/10/07 15:53:14 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T15:53:14.949920842Z"}
+{"log":"    2019/10/07 15:53:14 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T15:53:14.949999408Z"}
+{"log":"    2019/10/07 15:53:28 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T15:53:28.991038827Z"}
+{"log":"    2019/10/07 15:53:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:53:29.05349367Z"}
+{"log":"    2019/10/07 15:54:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:54:29.054019582Z"}
+{"log":"    2019/10/07 15:55:11 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T15:55:11.299484536Z"}
+{"log":"    2019/10/07 15:55:11 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T15:55:11.299558198Z"}
+{"log":"    2019/10/07 15:55:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:55:29.053942192Z"}
+{"log":"    2019/10/07 15:55:59 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T15:55:59.071956729Z"}
+{"log":"    2019/10/07 15:56:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:56:29.054655485Z"}
+{"log":"    2019/10/07 15:56:36 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=10 (5m0.005316052s) from=127.0.0.1:58572\r\n","stream":"stdout","time":"2019-10-07T15:56:36.319627412Z"}
+{"log":"    2019/10/07 15:56:43 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=10 (5m11.057849567s) from=127.0.0.1:58566\r\n","stream":"stdout","time":"2019-10-07T15:56:43.559101451Z"}
+{"log":"    2019/10/07 15:56:44 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=10 (5m10.528355993s) from=127.0.0.1:58568\r\n","stream":"stdout","time":"2019-10-07T15:56:44.396535551Z"}
+{"log":"    2019/10/07 15:56:53 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T15:56:53.937847493Z"}
+{"log":"    2019/10/07 15:56:53 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T15:56:53.937923806Z"}
+{"log":"    2019/10/07 15:57:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:57:29.05444939Z"}
+{"log":"    2019/10/07 15:58:07 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T15:58:07.861867206Z"}
+{"log":"    2019/10/07 15:58:13 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T15:58:13.381407555Z"}
+{"log":"    2019/10/07 15:58:13 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T15:58:13.381490898Z"}
+{"log":"    2019/10/07 15:58:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:58:29.054367096Z"}
+{"log":"    2019/10/07 15:59:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T15:59:29.054685351Z"}
+{"log":"    2019/10/07 15:59:31 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T15:59:31.975548575Z"}
+{"log":"    2019/10/07 15:59:31 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T15:59:31.975603102Z"}
+{"log":"    2019/10/07 16:00:25 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:00:25.736588552Z"}
+{"log":"    2019/10/07 16:00:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:00:29.055112276Z"}
+{"log":"    2019/10/07 16:00:48 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:00:48.06518679Z"}
+{"log":"    2019/10/07 16:00:48 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:00:48.06521787Z"}
+{"log":"    2019/10/07 16:01:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:01:29.055301692Z"}
+{"log":"    2019/10/07 16:02:27 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:02:27.547672651Z"}
+{"log":"    2019/10/07 16:02:27 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:02:27.54774016Z"}
+{"log":"    2019/10/07 16:02:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:02:29.057426316Z"}
+{"log":"    2019/10/07 16:02:44 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=dc1 (515.116µs) from=127.0.0.1:58754\r\n","stream":"stdout","time":"2019-10-07T16:02:44.655443445Z"}
+{"log":"    2019/10/07 16:02:44 [DEBUG] http: Request GET /v1/status/leader?dc=dc1 (177.976µs) from=127.0.0.1:58754\r\n","stream":"stdout","time":"2019-10-07T16:02:44.657026285Z"}
+{"log":"    2019/10/07 16:03:15 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:03:15.98286781Z"}
+{"log":"    2019/10/07 16:03:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:03:29.05576742Z"}
+{"log":"    2019/10/07 16:04:02 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:04:02.39963869Z"}
+{"log":"    2019/10/07 16:04:02 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:04:02.39974093Z"}
+{"log":"    2019/10/07 16:04:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:04:29.055667989Z"}
+{"log":"    2019/10/07 16:05:17 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:05:17.663808242Z"}
+{"log":"    2019/10/07 16:05:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:05:29.055793835Z"}
+{"log":"    2019/10/07 16:05:47 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:05:47.129390477Z"}
+{"log":"    2019/10/07 16:05:47 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:05:47.129474419Z"}
+{"log":"    2019/10/07 16:06:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:06:29.056422237Z"}
+{"log":"    2019/10/07 16:07:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:07:29.056465638Z"}
+{"log":"    2019/10/07 16:07:29 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:07:29.125845031Z"}
+{"log":"    2019/10/07 16:07:29 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:07:29.125942997Z"}
+{"log":"    2019/10/07 16:07:50 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:07:50.426721534Z"}
+{"log":"    2019/10/07 16:08:01 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=10 (5m18.173788609s) from=127.0.0.1:58752\r\n","stream":"stdout","time":"2019-10-07T16:08:01.081065542Z"}
+{"log":"    2019/10/07 16:08:01 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=dc1\u0026index=10 (5m15.012569103s) from=127.0.0.1:58754\r\n","stream":"stdout","time":"2019-10-07T16:08:01.71037352Z"}
+{"log":"    2019/10/07 16:08:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:08:29.056605012Z"}
+{"log":"    2019/10/07 16:08:42 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:08:42.121060914Z"}
+{"log":"    2019/10/07 16:08:42 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:08:42.121224185Z"}
+{"log":"    2019/10/07 16:09:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:09:29.056843366Z"}
+{"log":"    2019/10/07 16:09:33 [DEBUG] http: Request GET /v1/status/leader (155.241µs) from=127.0.0.1:59088\r\n","stream":"stdout","time":"2019-10-07T16:09:33.202201487Z"}
+{"log":"    2019/10/07 16:09:51 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:09:51.864660707Z"}
+{"log":"    2019/10/07 16:09:51 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:09:51.864743207Z"}
+{"log":"    2019/10/07 16:10:18 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:10:18.040388125Z"}
+{"log":"    2019/10/07 16:10:29 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:10:29.056729698Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Caught signal:  terminated\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522554489Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Graceful shutdown disabled. Exiting\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522583206Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Requesting shutdown\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522588612Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] consul: shutting down server\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522592768Z"}
+{"log":"    2019/10/07 16:11:13 [WARN] serf: Shutdown without a Leave\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522596955Z"}
+{"log":"    2019/10/07 16:11:13 [WARN] serf: Shutdown without a Leave\r\n","stream":"stdout","time":"2019-10-07T16:11:13.52260094Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] manager: shutting down\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522605009Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: consul server down\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522678355Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: shutdown complete\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522692018Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Stopping DNS server 0.0.0.0:8600 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522695613Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Stopping DNS server 0.0.0.0:8600 (udp)\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522698406Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Stopping HTTP server [::]:8500 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522745028Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Waiting for endpoints to shut down\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522756928Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Endpoints down\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522761952Z"}
+{"log":"    2019/10/07 16:11:13 [INFO] agent: Exit code: 1\r\n","stream":"stdout","time":"2019-10-07T16:11:13.522766197Z"}
+{"log":"==\u003e Found address '127.0.0.1' for interface 'lo', setting bind option...\r\n","stream":"stdout","time":"2019-10-07T16:11:30.314635005Z"}
+{"log":"==\u003e Starting Consul agent...\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350652489Z"}
+{"log":"           Version: 'v1.6.1'\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350669924Z"}
+{"log":"           Node ID: 'f7aae20b-c827-351e-6607-650b19b66176'\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350673165Z"}
+{"log":"         Node name: 'rohit-X406UAR'\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350675975Z"}
+{"log":"        Datacenter: 'dc1' (Segment: '\u003call\u003e')\r\n","stream":"stdout","time":"2019-10-07T16:11:30.3506874Z"}
+{"log":"            Server: true (Bootstrap: false)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350690075Z"}
+{"log":"       Client Addr: [0.0.0.0] (HTTP: 8500, HTTPS: -1, gRPC: 8502, DNS: 8600)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350692406Z"}
+{"log":"      Cluster Addr: 127.0.0.1 (LAN: 8301, WAN: 8302)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350694749Z"}
+{"log":"           Encrypt: Gossip: false, TLS-Outgoing: false, TLS-Incoming: false, Auto-Encrypt-TLS: false\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350697069Z"}
+{"log":"\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350699403Z"}
+{"log":"==\u003e Log data will now stream in as it occurs:\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350701611Z"}
+{"log":"\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350703961Z"}
+{"log":"    2019/10/07 16:11:30 [DEBUG] tlsutil: Update with version 1\r\n","stream":"stdout","time":"2019-10-07T16:11:30.350811079Z"}
+{"log":"    2019/10/07 16:11:30 [DEBUG] tlsutil: OutgoingRPCWrapper with version 1\r\n","stream":"stdout","time":"2019-10-07T16:11:30.351234219Z"}
+{"log":"    2019/10/07 16:11:30 [INFO]  raft: Initial configuration (index=1): [{Suffrage:Voter ID:f7aae20b-c827-351e-6607-650b19b66176 Address:127.0.0.1:8300}]\r\n","stream":"stdout","time":"2019-10-07T16:11:30.351548919Z"}
+{"log":"    2019/10/07 16:11:30 [INFO]  raft: Node at 127.0.0.1:8300 [Follower] entering Follower state (Leader: \"\")\r\n","stream":"stdout","time":"2019-10-07T16:11:30.351610482Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] serf: EventMemberJoin: rohit-X406UAR.dc1 127.0.0.1\r\n","stream":"stdout","time":"2019-10-07T16:11:30.352169447Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] serf: EventMemberJoin: rohit-X406UAR 127.0.0.1\r\n","stream":"stdout","time":"2019-10-07T16:11:30.352667594Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] consul: Adding LAN server rohit-X406UAR (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.352794001Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] consul: Handled member-join event for server \"rohit-X406UAR.dc1\" in area \"wan\"\r\n","stream":"stdout","time":"2019-10-07T16:11:30.352802198Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] agent: Started DNS server 0.0.0.0:8600 (udp)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.352953624Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] agent: Started DNS server 0.0.0.0:8600 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.352962731Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] agent: Started HTTP server on [::]:8500 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.353223729Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] agent: Started gRPC server on [::]:8502 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:11:30.353326622Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] agent: started state syncer\r\n","stream":"stdout","time":"2019-10-07T16:11:30.353359381Z"}
+{"log":"==\u003e Consul agent running!\r\n","stream":"stdout","time":"2019-10-07T16:11:30.353373749Z"}
+{"log":"    2019/10/07 16:11:30 [WARN]  raft: Heartbeat timeout from \"\" reached, starting election\r\n","stream":"stdout","time":"2019-10-07T16:11:30.417949648Z"}
+{"log":"    2019/10/07 16:11:30 [INFO]  raft: Node at 127.0.0.1:8300 [Candidate] entering Candidate state in term 2\r\n","stream":"stdout","time":"2019-10-07T16:11:30.418000919Z"}
+{"log":"    2019/10/07 16:11:30 [DEBUG] raft: Votes needed: 1\r\n","stream":"stdout","time":"2019-10-07T16:11:30.418017399Z"}
+{"log":"    2019/10/07 16:11:30 [DEBUG] raft: Vote granted from f7aae20b-c827-351e-6607-650b19b66176 in term 2. Tally: 1\r\n","stream":"stdout","time":"2019-10-07T16:11:30.418031104Z"}
+{"log":"    2019/10/07 16:11:30 [INFO]  raft: Election won. Tally: 1\r\n","stream":"stdout","time":"2019-10-07T16:11:30.418046129Z"}
+{"log":"    2019/10/07 16:11:30 [INFO]  raft: Node at 127.0.0.1:8300 [Leader] entering Leader state\r\n","stream":"stdout","time":"2019-10-07T16:11:30.418062341Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] consul: cluster leadership acquired\r\n","stream":"stdout","time":"2019-10-07T16:11:30.418136618Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] consul: New leader elected: rohit-X406UAR\r\n","stream":"stdout","time":"2019-10-07T16:11:30.418364367Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] agent: Synced node info\r\n","stream":"stdout","time":"2019-10-07T16:11:30.437721315Z"}
+{"log":"    2019/10/07 16:11:30 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:11:30.437755081Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] connect: initialized primary datacenter CA with provider \"consul\"\r\n","stream":"stdout","time":"2019-10-07T16:11:30.444758116Z"}
+{"log":"    2019/10/07 16:11:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:11:30.444791352Z"}
+{"log":"    2019/10/07 16:11:30 [INFO] consul: member 'rohit-X406UAR' joined, marking health alive\r\n","stream":"stdout","time":"2019-10-07T16:11:30.444802632Z"}
+{"log":"    2019/10/07 16:11:32 [DEBUG] tlsutil: OutgoingRPCWrapper with version 1\r\n","stream":"stdout","time":"2019-10-07T16:11:32.420142107Z"}
+{"log":"    2019/10/07 16:11:33 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:11:33.126207766Z"}
+{"log":"    2019/10/07 16:11:33 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:11:33.126273158Z"}
+{"log":"    2019/10/07 16:11:58 [DEBUG] http: Request GET /v1/catalog/datacenters (216.521µs) from=127.0.0.1:59128\r\n","stream":"stdout","time":"2019-10-07T16:11:58.614208326Z"}
+{"log":"    2019/10/07 16:11:58 [DEBUG] http: Request GET /v1/catalog/datacenters (735.408µs) from=127.0.0.1:59128\r\n","stream":"stdout","time":"2019-10-07T16:11:58.619675778Z"}
+{"log":"    2019/10/07 16:11:58 [DEBUG] http: Request GET /v1/catalog/datacenters (203.969µs) from=127.0.0.1:59128\r\n","stream":"stdout","time":"2019-10-07T16:11:58.673222646Z"}
+{"log":"    2019/10/07 16:11:58 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1 (189.482µs) from=127.0.0.1:59128\r\n","stream":"stdout","time":"2019-10-07T16:11:58.681950377Z"}
+{"log":"    2019/10/07 16:12:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:12:30.419596425Z"}
+{"log":"    2019/10/07 16:12:31 [DEBUG] http: Request GET /v1/status/leader (145.703µs) from=127.0.0.1:59136\r\n","stream":"stdout","time":"2019-10-07T16:12:31.222397209Z"}
+{"log":"    2019/10/07 16:12:48 [INFO] agent: Synced service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\"\r\n","stream":"stdout","time":"2019-10-07T16:12:48.062087689Z"}
+{"log":"    2019/10/07 16:12:48 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:12:48.062140881Z"}
+{"log":"    2019/10/07 16:12:48 [DEBUG] http: Request PUT /v1/agent/service/register (8.368213ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:12:48.062147008Z"}
+{"log":"    2019/10/07 16:12:48 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:12:48.062166992Z"}
+{"log":"    2019/10/07 16:12:48 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:12:48.062172822Z"}
+{"log":"    2019/10/07 16:12:48 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=10 (47.352328913s) from=127.0.0.1:59128\r\n","stream":"stdout","time":"2019-10-07T16:12:48.062347074Z"}
+{"log":"    2019/10/07 16:12:55 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1 (467.972µs) from=127.0.0.1:59134\r\n","stream":"stdout","time":"2019-10-07T16:12:55.01694896Z"}
+{"log":"    2019/10/07 16:12:57 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1 (411.657µs) from=127.0.0.1:59126\r\n","stream":"stdout","time":"2019-10-07T16:12:57.535539992Z"}
+{"log":"    2019/10/07 16:12:57 [DEBUG] http: Request GET /v1/catalog/connect/mongo?dc=dc1 (709.777µs) from=127.0.0.1:59126\r\n","stream":"stdout","time":"2019-10-07T16:12:57.549163842Z"}
+{"log":"    2019/10/07 16:13:30 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:13:30.354553226Z"}
+{"log":"    2019/10/07 16:13:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:13:30.420056804Z"}
+{"log":"    2019/10/07 16:14:07 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:14:07.955518638Z"}
+{"log":"    2019/10/07 16:14:07 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:07.955542354Z"}
+{"log":"    2019/10/07 16:14:07 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:07.95554665Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:08.45612241Z"}
+{"log":"    2019/10/07 16:14:08 [INFO] agent: Synced service \"rohit-X406UAR:zookeeper:2181\"\r\n","stream":"stdout","time":"2019-10-07T16:14:08.457704014Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:08.457756782Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] http: Request PUT /v1/agent/service/register (13.967071ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:08.457779311Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:08.460781952Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:08.460838076Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:08.460861245Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=15 (1m2.817756109s) from=127.0.0.1:59786\r\n","stream":"stdout","time":"2019-10-07T16:14:08.463706706Z"}
+{"log":"    2019/10/07 16:14:08 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=15 (1m18.379340974s) from=127.0.0.1:59128\r\n","stream":"stdout","time":"2019-10-07T16:14:08.464750132Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041198242Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041221543Z"}
+{"log":"    2019/10/07 16:14:09 [INFO] agent: Synced service \"rohit-X406UAR:broker:29092\"\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041413613Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041426777Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] http: Request PUT /v1/agent/service/register (1.304255ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041432155Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041514606Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041528475Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041533831Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.041578962Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053185919Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053218971Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053222425Z"}
+{"log":"    2019/10/07 16:14:09 [INFO] agent: Synced service \"rohit-X406UAR:broker:9092\"\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053438529Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053449969Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] http: Request PUT /v1/agent/service/register (11.667786ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053454776Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.05353395Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.05354299Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.05354764Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053557285Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.053561729Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683566481Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683585272Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683590772Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683595386Z"}
+{"log":"    2019/10/07 16:14:09 [INFO] agent: Synced service \"rohit-X406UAR:schema-registry:8081\"\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683600228Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683604512Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] http: Request PUT /v1/agent/service/register (11.6306ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683607665Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683613564Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683618294Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683622616Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.68362692Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683631254Z"}
+{"log":"    2019/10/07 16:14:09 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:09.683667039Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=21 (239.96µs) from=127.0.0.1:59786\r\n","stream":"stdout","time":"2019-10-07T16:14:10.489221943Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.576516069Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.576538735Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.576542006Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.5766217Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.576757624Z"}
+{"log":"    2019/10/07 16:14:10 [INFO] agent: Synced service \"rohit-X406UAR:rest-proxy:8082\"\r\n","stream":"stdout","time":"2019-10-07T16:14:10.576869109Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.57687741Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] http: Request PUT /v1/agent/service/register (1.70646ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:10.57693208Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.576940266Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.577008835Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.577079468Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.577088231Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.577348538Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.577357459Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.577361026Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599812539Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599846534Z"}
+{"log":"    2019/10/07 16:14:10 [INFO] agent: Synced service \"rohit-X406UAR:connect:8083\"\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599851442Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.59985557Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599859483Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599863265Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599867998Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.59987202Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] http: Request PUT /v1/agent/service/register (6.804157ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599875623Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599879314Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599883013Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.59988686Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599908238Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599912755Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599916625Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599920114Z"}
+{"log":"    2019/10/07 16:14:10 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:10.599923967Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.440747516Z"}
+{"log":"    2019/10/07 16:14:11 [INFO] agent: Synced service \"rohit-X406UAR:ksql-server:8088\"\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441006493Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441021719Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441093534Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441101683Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441105789Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441109612Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441113505Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441117245Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] http: Request PUT /v1/agent/service/register (7.116821ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441120734Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441216338Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441224055Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441227741Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441231216Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441234784Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.44123842Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441242224Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441293558Z"}
+{"log":"    2019/10/07 16:14:11 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:11.441299567Z"}
+{"log":"    2019/10/07 16:14:12 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=24 (280.775µs) from=127.0.0.1:59786\r\n","stream":"stdout","time":"2019-10-07T16:14:12.498650428Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907468363Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907512053Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907518069Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907522225Z"}
+{"log":"    2019/10/07 16:14:13 [INFO] agent: Synced service \"rohit-X406UAR:control-center:9021\"\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907814336Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907824336Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907828484Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907831889Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907853064Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907857621Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] http: Request PUT /v1/agent/service/register (7.239978ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:14:13.907902283Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908039816Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908052881Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908223452Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:control-center:9021\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908313369Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908320809Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908396059Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908474457Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908552625Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.90863046Z"}
+{"log":"    2019/10/07 16:14:13 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:14:13.908706947Z"}
+{"log":"    2019/10/07 16:14:14 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=27 (457.519µs) from=127.0.0.1:59786\r\n","stream":"stdout","time":"2019-10-07T16:14:14.510404128Z"}
+{"log":"    2019/10/07 16:14:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:14:30.438483595Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:15:14.941707359Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.94326548Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943277472Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943293656Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943298024Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943302152Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943306043Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943309857Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943313717Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Service \"rohit-X406UAR:control-center:9021\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943317617Z"}
+{"log":"    2019/10/07 16:15:14 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:15:14.943321548Z"}
+{"log":"    2019/10/07 16:15:15 [DEBUG] http: Request GET /v1/catalog/datacenters (4.317189ms) from=127.0.0.1:60246\r\n","stream":"stdout","time":"2019-10-07T16:15:15.648050207Z"}
+{"log":"    2019/10/07 16:15:15 [DEBUG] http: Request GET /v1/catalog/datacenters (1.532637ms) from=127.0.0.1:60244\r\n","stream":"stdout","time":"2019-10-07T16:15:15.648153127Z"}
+{"log":"    2019/10/07 16:15:17 [DEBUG] http: Request GET /v1/catalog/datacenters (135.844µs) from=127.0.0.1:60246\r\n","stream":"stdout","time":"2019-10-07T16:15:17.73325583Z"}
+{"log":"    2019/10/07 16:15:17 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1 (1.048564ms) from=127.0.0.1:60246\r\n","stream":"stdout","time":"2019-10-07T16:15:17.744765229Z"}
+{"log":"    2019/10/07 16:15:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:15:30.431146617Z"}
+{"log":"    2019/10/07 16:16:06 [DEBUG] http: Request GET /v1/catalog/datacenters (2.876568ms) from=127.0.0.1:60476\r\n","stream":"stdout","time":"2019-10-07T16:16:06.353241743Z"}
+{"log":"    2019/10/07 16:16:06 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1 (403.176µs) from=127.0.0.1:60476\r\n","stream":"stdout","time":"2019-10-07T16:16:06.405245361Z"}
+{"log":"    2019/10/07 16:16:26 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:16:26.789082725Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:16:30.42575419Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580050189Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580818128Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580873527Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580898319Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.58091128Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:control-center:9021\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580923196Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580968725Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580980806Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.580990694Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.581000538Z"}
+{"log":"    2019/10/07 16:16:30 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:16:30.581010528Z"}
+{"log":"    2019/10/07 16:16:50 [DEBUG] http: Request GET /v1/health/service/consul?dc=dc1 (12.886249ms) from=127.0.0.1:60532\r\n","stream":"stdout","time":"2019-10-07T16:16:50.677626077Z"}
+{"log":"    2019/10/07 16:16:57 [DEBUG] http: Request GET /v1/health/service/cp-enterprise-kafka-9092?dc=dc1 (302.551µs) from=127.0.0.1:60530\r\n","stream":"stdout","time":"2019-10-07T16:16:57.377676544Z"}
+{"log":"    2019/10/07 16:16:58 [DEBUG] http: Request GET /v1/health/service/cp-enterprise-kafka-9092?dc=dc1 (344.227µs) from=127.0.0.1:60530\r\n","stream":"stdout","time":"2019-10-07T16:16:58.481959964Z"}
+{"log":"    2019/10/07 16:16:58 [DEBUG] http: Request GET /v1/catalog/connect/cp-enterprise-kafka-9092?dc=dc1 (822.787µs) from=127.0.0.1:60530\r\n","stream":"stdout","time":"2019-10-07T16:16:58.493266322Z"}
+{"log":"    2019/10/07 16:17:07 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1 (273.967µs) from=127.0.0.1:60678\r\n","stream":"stdout","time":"2019-10-07T16:17:07.425959622Z"}
+{"log":"    2019/10/07 16:17:09 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=dc1 (2.948937ms) from=127.0.0.1:60694\r\n","stream":"stdout","time":"2019-10-07T16:17:09.171242282Z"}
+{"log":"    2019/10/07 16:17:09 [DEBUG] http: Request GET /v1/internal/ui/node/rohit-X406UAR?dc=dc1 (7.756759ms) from=127.0.0.1:60690\r\n","stream":"stdout","time":"2019-10-07T16:17:09.17387062Z"}
+{"log":"    2019/10/07 16:17:09 [DEBUG] http: Request GET /v1/session/node/rohit-X406UAR?dc=dc1 (1.715134ms) from=127.0.0.1:60694\r\n","stream":"stdout","time":"2019-10-07T16:17:09.175905404Z"}
+{"log":"    2019/10/07 16:17:22 [DEBUG] http: Request GET /v1/coordinate/nodes?dc=dc1\u0026index=39 (11.226787482s) from=127.0.0.1:60690\r\n","stream":"stdout","time":"2019-10-07T16:17:22.427470052Z"}
+{"log":"    2019/10/07 16:17:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:17:30.426859579Z"}
+{"log":"    2019/10/07 16:17:36 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1 (3.449043ms) from=127.0.0.1:60690\r\n","stream":"stdout","time":"2019-10-07T16:17:36.151674601Z"}
+{"log":"    2019/10/07 16:17:36 [DEBUG] http: Request GET /v1/catalog/connect/mongo?dc=dc1 (816.005µs) from=127.0.0.1:60690\r\n","stream":"stdout","time":"2019-10-07T16:17:36.167477224Z"}
+{"log":"    2019/10/07 16:18:14 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1\u0026index=15 (5m17.538234303s) from=127.0.0.1:59134\r\n","stream":"stdout","time":"2019-10-07T16:18:14.575566134Z"}
+{"log":"    2019/10/07 16:18:15 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1\u0026index=15 (5m15.740812761s) from=127.0.0.1:59126\r\n","stream":"stdout","time":"2019-10-07T16:18:15.296929537Z"}
+{"log":"    2019/10/07 16:18:15 [DEBUG] http: Request GET /v1/catalog/connect/mongo?dc=dc1\u0026index=15 (5m15.830675911s) from=127.0.0.1:59132\r\n","stream":"stdout","time":"2019-10-07T16:18:15.442859081Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850353784Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850431726Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850495223Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:rest-proxy:8082\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.85051351Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850529128Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:control-center:9021\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850544068Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850559133Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.8505798Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850595082Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850707004Z"}
+{"log":"    2019/10/07 16:18:19 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:19.850752648Z"}
+{"log":"    2019/10/07 16:18:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:18:30.426775878Z"}
+{"log":"    2019/10/07 16:18:38 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:18:38.375012446Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.981253228Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.982129326Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.982138682Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.982142346Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.982145599Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.982148848Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: removed service \"rohit-X406UAR:rest-proxy:8082\"\r\n","stream":"stdout","time":"2019-10-07T16:18:46.984490145Z"}
+{"log":"    2019/10/07 16:18:46 [INFO] agent: Deregistered service \"rohit-X406UAR:rest-proxy:8082\"\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995013533Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995035752Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:control-center:9021\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995042391Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995047163Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995051941Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995057215Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:control-center:9021\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.99506239Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995098835Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995122193Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995126228Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995129177Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995132035Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995134827Z"}
+{"log":"    2019/10/07 16:18:46 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:rest-proxy:8082 (17.273201ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:18:46.995137665Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=28 (46.957664931s) from=127.0.0.1:60870\r\n","stream":"stdout","time":"2019-10-07T16:18:47.007342893Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=28 (1m39.578145991s) from=127.0.0.1:60678\r\n","stream":"stdout","time":"2019-10-07T16:18:47.008641466Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] http: Request GET /v1/internal/ui/node/rohit-X406UAR?dc=dc1\u0026index=28 (1m35.804371499s) from=127.0.0.1:60694\r\n","stream":"stdout","time":"2019-10-07T16:18:47.008666241Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=28 (2m41.075277838s) from=127.0.0.1:60528\r\n","stream":"stdout","time":"2019-10-07T16:18:47.008671959Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=28 (4m30.485435646s) from=127.0.0.1:59786\r\n","stream":"stdout","time":"2019-10-07T16:18:47.008676476Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=28 (2m38.573283406s) from=127.0.0.1:60476\r\n","stream":"stdout","time":"2019-10-07T16:18:47.009074628Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: removed service \"rohit-X406UAR:control-center:9021\"\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124876305Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124921267Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124937495Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124951138Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124964235Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124975939Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124986691Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.124998384Z"}
+{"log":"    2019/10/07 16:18:47 [INFO] agent: Deregistered service \"rohit-X406UAR:control-center:9021\"\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128396109Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128428641Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:control-center:9021 (4.047663ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128440252Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128540515Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128667394Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128685336Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.12869382Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.12869989Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:ksql-server:8088\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128705869Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128712109Z"}
+{"log":"    2019/10/07 16:18:47 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:47.128719423Z"}
+{"log":"    2019/10/07 16:18:53 [DEBUG] http: Request GET /v1/catalog/connect/cp-enterprise-kafka-9092?dc=dc1\u0026index=23 (608.697µs) from=127.0.0.1:60870\r\n","stream":"stdout","time":"2019-10-07T16:18:53.1582075Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.552482618Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: removed service \"rohit-X406UAR:ksql-server:8088\"\r\n","stream":"stdout","time":"2019-10-07T16:18:57.552530791Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.552542736Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.552551081Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.552558878Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.552566903Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.552582867Z"}
+{"log":"    2019/10/07 16:18:57 [INFO] agent: Deregistered service \"rohit-X406UAR:ksql-server:8088\"\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553243763Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553283181Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553300286Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553388075Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553413684Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553426334Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.55343731Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Service \"rohit-X406UAR:connect:8083\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553468966Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553478565Z"}
+{"log":"    2019/10/07 16:18:57 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:ksql-server:8088 (1.297132ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:18:57.553881333Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471133155Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471148543Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: removed service \"rohit-X406UAR:connect:8083\"\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471152329Z"}
+{"log":"    2019/10/07 16:18:58 [INFO] agent: Deregistered service \"rohit-X406UAR:connect:8083\"\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471335246Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471345625Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471349041Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471351756Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471354566Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471394354Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471404179Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471407755Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471410686Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Service \"rohit-X406UAR:schema-registry:8081\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471413579Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:58.47141638Z"}
+{"log":"    2019/10/07 16:18:58 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:connect:8083 (384.682µs) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:18:58.471419309Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.352822092Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: removed service \"rohit-X406UAR:schema-registry:8081\"\r\n","stream":"stdout","time":"2019-10-07T16:18:59.35283805Z"}
+{"log":"    2019/10/07 16:18:59 [INFO] agent: Deregistered service \"rohit-X406UAR:schema-registry:8081\"\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353459546Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353472055Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.35347569Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353478792Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.35348166Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353532193Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353539875Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:broker:29092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353553167Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353558967Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:18:59.35356171Z"}
+{"log":"    2019/10/07 16:18:59 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:schema-registry:8081 (812.565µs) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:18:59.353564233Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: removed service \"rohit-X406UAR:broker:29092\"\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839423032Z"}
+{"log":"    2019/10/07 16:19:04 [INFO] agent: Deregistered service \"rohit-X406UAR:broker:29092\"\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839658392Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839671423Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839676748Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839681313Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.83968599Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839694157Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:broker:9092\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839699048Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839720308Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839724612Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:broker:29092 (475.55µs) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:19:04.839727598Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: removed service \"rohit-X406UAR:broker:9092\"\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840036511Z"}
+{"log":"    2019/10/07 16:19:04 [INFO] agent: Deregistered service \"rohit-X406UAR:broker:9092\"\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840497593Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840507716Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840512041Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.84051514Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840518034Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Service \"rohit-X406UAR:zookeeper:2181\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840778545Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840791117Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:broker:9092 (843.611µs) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840840384Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] http: Request GET /v1/health/service/cp-enterprise-kafka-9092?dc=dc1\u0026index=23 (54.402810433s) from=127.0.0.1:60898\r\n","stream":"stdout","time":"2019-10-07T16:19:04.840968045Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] http: Request GET /v1/health/service/cp-enterprise-kafka-9092?dc=dc1\u0026index=23 (2m2.305470973s) from=127.0.0.1:60670\r\n","stream":"stdout","time":"2019-10-07T16:19:04.841352974Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] http: Request GET /v1/health/service/cp-enterprise-kafka-9092?dc=dc1\u0026index=23 (2m4.343739392s) from=127.0.0.1:60530\r\n","stream":"stdout","time":"2019-10-07T16:19:04.841571573Z"}
+{"log":"    2019/10/07 16:19:04 [DEBUG] http: Request GET /v1/health/service/cp-enterprise-kafka-9092?dc=dc1\u0026index=23 (11.669603222s) from=127.0.0.1:60870\r\n","stream":"stdout","time":"2019-10-07T16:19:04.84184882Z"}
+{"log":"    2019/10/07 16:19:05 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:05.734846492Z"}
+{"log":"    2019/10/07 16:19:05 [DEBUG] agent: removed service \"rohit-X406UAR:zookeeper:2181\"\r\n","stream":"stdout","time":"2019-10-07T16:19:05.73490697Z"}
+{"log":"    2019/10/07 16:19:05 [INFO] agent: Deregistered service \"rohit-X406UAR:zookeeper:2181\"\r\n","stream":"stdout","time":"2019-10-07T16:19:05.735954595Z"}
+{"log":"    2019/10/07 16:19:05 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:05.735994058Z"}
+{"log":"    2019/10/07 16:19:05 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:05.736101233Z"}
+{"log":"    2019/10/07 16:19:05 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:19:05.738158771Z"}
+{"log":"    2019/10/07 16:19:05 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:zookeeper:2181 (3.596216ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:19:05.738190206Z"}
+{"log":"    2019/10/07 16:19:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:19:30.427344662Z"}
+{"log":"    2019/10/07 16:20:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:20:30.426638477Z"}
+{"log":"    2019/10/07 16:20:34 [DEBUG] agent: Skipping remote check \"serfHealth\" since it is managed automatically\r\n","stream":"stdout","time":"2019-10-07T16:20:34.320489313Z"}
+{"log":"    2019/10/07 16:20:34 [DEBUG] agent: Service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\" in sync\r\n","stream":"stdout","time":"2019-10-07T16:20:34.320579271Z"}
+{"log":"    2019/10/07 16:20:34 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:20:34.320605156Z"}
+{"log":"    2019/10/07 16:20:41 [INFO] agent: Deregistered service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\"\r\n","stream":"stdout","time":"2019-10-07T16:20:41.076019515Z"}
+{"log":"    2019/10/07 16:20:41 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:20:41.076039619Z"}
+{"log":"    2019/10/07 16:20:41 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1\u0026index=15 (3m26.104831445s) from=127.0.0.1:60712\r\n","stream":"stdout","time":"2019-10-07T16:20:41.076584466Z"}
+{"log":"    2019/10/07 16:20:41 [DEBUG] agent: removed service \"rohit-X406UAR:mongoshardeddocker_router_1:27017\"\r\n","stream":"stdout","time":"2019-10-07T16:20:41.076980631Z"}
+{"log":"    2019/10/07 16:20:41 [DEBUG] agent: Node info in sync\r\n","stream":"stdout","time":"2019-10-07T16:20:41.07699149Z"}
+{"log":"    2019/10/07 16:20:41 [DEBUG] http: Request PUT /v1/agent/service/deregister/rohit-X406UAR:mongoshardeddocker_router_1:27017 (1.231984ms) from=127.0.0.1:59310\r\n","stream":"stdout","time":"2019-10-07T16:20:41.076995046Z"}
+{"log":"    2019/10/07 16:20:41 [DEBUG] http: Request GET /v1/health/service/mongo?dc=dc1\u0026index=15 (3m2.905991027s) from=127.0.0.1:60690\r\n","stream":"stdout","time":"2019-10-07T16:20:41.077664101Z"}
+{"log":"    2019/10/07 16:20:43 [DEBUG] manager: Rebalanced 1 servers, next active server is rohit-X406UAR.dc1 (Addr: tcp/127.0.0.1:8300) (DC: dc1)\r\n","stream":"stdout","time":"2019-10-07T16:20:43.712620881Z"}
+{"log":"    2019/10/07 16:20:52 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1\u0026index=46 (280.707µs) from=127.0.0.1:60870\r\n","stream":"stdout","time":"2019-10-07T16:20:52.287948696Z"}
+{"log":"    2019/10/07 16:21:30 [DEBUG] consul: Skipping self join check for \"rohit-X406UAR\" since the cluster is too small\r\n","stream":"stdout","time":"2019-10-07T16:21:30.427244753Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: Caught signal:  terminated\r\n","stream":"stdout","time":"2019-10-07T16:21:33.262509078Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: Graceful shutdown disabled. Exiting\r\n","stream":"stdout","time":"2019-10-07T16:21:33.26306795Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: Requesting shutdown\r\n","stream":"stdout","time":"2019-10-07T16:21:33.263524597Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] consul: shutting down server\r\n","stream":"stdout","time":"2019-10-07T16:21:33.26545863Z"}
+{"log":"    2019/10/07 16:21:33 [WARN] serf: Shutdown without a Leave\r\n","stream":"stdout","time":"2019-10-07T16:21:33.265471758Z"}
+{"log":"    2019/10/07 16:21:33 [WARN] serf: Shutdown without a Leave\r\n","stream":"stdout","time":"2019-10-07T16:21:33.266429117Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] manager: shutting down\r\n","stream":"stdout","time":"2019-10-07T16:21:33.267391896Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: consul server down\r\n","stream":"stdout","time":"2019-10-07T16:21:33.27054582Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: shutdown complete\r\n","stream":"stdout","time":"2019-10-07T16:21:33.270556345Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: Stopping DNS server 0.0.0.0:8600 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:21:33.270559976Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: Stopping DNS server 0.0.0.0:8600 (udp)\r\n","stream":"stdout","time":"2019-10-07T16:21:33.271421416Z"}
+{"log":"    2019/10/07 16:21:33 [INFO] agent: Stopping HTTP server [::]:8500 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:21:33.271487812Z"}
+{"log":"    2019/10/07 16:21:34 [WARN] agent: Timeout stopping HTTP server [::]:8500 (tcp)\r\n","stream":"stdout","time":"2019-10-07T16:21:34.272565335Z"}
+{"log":"    2019/10/07 16:21:34 [INFO] agent: Waiting for endpoints to shut down\r\n","stream":"stdout","time":"2019-10-07T16:21:34.27261802Z"}
+{"log":"    2019/10/07 16:21:34 [INFO] agent: Endpoints down\r\n","stream":"stdout","time":"2019-10-07T16:21:34.274758255Z"}
+{"log":"    2019/10/07 16:21:34 [INFO] agent: Exit code: 1\r\n","stream":"stdout","time":"2019-10-07T16:21:34.274796176Z"}
