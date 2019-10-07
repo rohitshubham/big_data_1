@@ -219,16 +219,37 @@ It not only registered mongoDB, `data-ingest` was also automatically detected an
 
 ![kafka_3](./images/kafka_3.png)
 * Fig 15: Kafka broker registered with Zookeeper
+---
+### **Mysimbdp-daas** (Bonus part)
+
+4. `Mysimbdp-daas` has been implemented in this project as the RESTful API container using `docker`. It supports CRUD commands in the database. 
+
+It has been implemented in python and uses `flask` library to create Restful APIs endpoints. It connects to the database using `Pymongo` library and fetches the BSON object from it. It then converts this data to JSON and send the output to end user. All the endpoints leverage suitable HTTP verbs (GET, POST etc).
+
+This container runs on port number 5000 on the local system and can easily be configured to run as multiple instances each using different port. Parallel running on the multiple containers would ensure scalability of the `Daas`. An example request of read operation is shown in figure 15.
+
+![postman_1](./images/postman_1.png)
+* Fig 16: Kafka broker registered with Zookeeper
 
 
+5. If only we could use `simple-daas` for the ingestion, we could easily scale it up without any major changes. As our design is data-centric, all the data should always come in via the message queue system. In our `simple-Daas` code, we would add the kafka library and use it directly push the incoming data into the kafka's queue (see `daas_api.py` lines 44-49). Additionally, to scale it up, we would have to start multiple instances of our Daas API container at ports `5000..n` and connect them all to Kafka queue for incoming data. Since, kafka is already running as multiple clusters, it would easily be able to handle the concurrent requests from daas containers. (Please see figure 5 for overview of our architecture)
+
+#### MySimbdp-Daas performance
+
+I did some testing with the API endpoint to ingest data using 1 and 10 streams via the API endpoint (not test for 5 streams!). All these requests were going through one single Daas container. So as explained in the previous section, the flow of data was :
+> Restful API (POST request) -> Kafka Queue -> pymongo connection -> mongoDB
+
+The result for 1 stream was pretty uninteresting at 1.0ms of kafka response in production and avg of 17.5ms in consumption. This is the same result as we got in the last section.
+
+However, when there were 10 streams in parallel, our production response time was:
+
+![postman_1](./images/api_1.png)
+* Fig 17: Response time in produce queue
+
+The median jumped to 2.0ms and our 95th percentile was 22ms. Also, our 99th percentile was 130ms. It essentially means our `Daas` layer on a single container changed the ingestion rate from avg of 17.5ms to 35ms. If we go by our 99th percentile rate, it would mean 1% of our data lagged by more than ```17.5*130 = 2275ms``` i.e. around 2.5 seconds. 
 
 
-
-
-
-
-
-
+---
 ## Sources
 [1] [Uber’s Big Data Platform: 100+ Petabytes with Minute Latency](https://eng.uber.com/uber-big-data-platform/)
 
@@ -244,3 +265,4 @@ It not only registered mongoDB, `data-ingest` was also automatically detected an
 
 [7] https://www.consul.io/api/agent.html
 
+---
