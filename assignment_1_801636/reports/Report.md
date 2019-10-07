@@ -6,7 +6,9 @@
 ## Part 1
 ### Design of the project
 
-This project was created to be write-intensive in nature and hence was designed with the use-case of low latency concurrent and distributed write operations. The Simple big data platform designed has 3 basic components, however, we have followed the traditional micro-services pattern and deployed each of them on a loosely coupled containers.
+This project was designed to be write-intensive in nature and hence was architected with the use-case of low latency concurrent and distributed write operations. Hence, all the write operation will go through an message queue (Kafka in our case) and read operations through Restful APIs. Kafka was chosen as a data-ingestor component as to prevent loss of streaming data in case of temporary DB failure and prevent crashing of database in case request rate exceeds database insertion speed during peak hours.
+
+The Simple big data platform designed has 3 basic components, however, we have followed the traditional micro-services pattern and deployed each of them on a loosely coupled containers.
 
 ### 1. Mysimbdp-coredms
 #### MongoDB: 
@@ -61,6 +63,7 @@ Some of the sample API's available to the user to read and update data:
 * _/getByHostId/\<hostId\>_ : This is a `GET` HTTP method and it returns the data of one User matching this hostID from mongoDb.
 * _/getByNeighbourhood/\<neighbourhood\>_: This is a `GET` HTTP method and it returns the all the airbnb data matching this neighborhood name from the database.
 * _/updateHostName/\<hostID\>/\<newHostName\>_ : This is a `POST` endpoint and is used for updating the hostname using the hostId.
+* PLus one more insertion API. Discussed separately in Part 3
 
 It is important to note here that this is the _only_ client facing app and can be scaled by spawning new containers depending on the load value (Automatic spawning of new containers is not implemented). As mongoDb natively supports concurrency along with the sharding and a good (and uniform!) shard key (hashed in most cases), it will easily distribute the read-loads on multiple shards. This will allow horizontal scalability and multi-tenant design on our _mysimplebdp-Daas_. 
 
@@ -113,7 +116,7 @@ This goes on to show how easy it is to start, deploy and manage containers compa
     "availability_365"
     }
 ```
-   The incoming data is in CSV format which is transformed to Mongo's JSON format before being loaded. We are also enforcing the `validationLevel = strict` and `validationAction  = warn` in our existing documents.
+   The incoming data is in CSV format which is transformed to Mongo's JSON format before being loaded. We are also enforcing the `validationLevel = strict` and `validationAction  = warn` in our existing documents. The primary key is `_id` as it is naturally distributed and acts as a good shard key candidate for a MongoDb sharding.
 
 2. As described earlier, the database is shared and replicated to provide maximum availability and scalability in an multi-tenant environment. We have 3 shards of data with 2 replicas and 3 config servers. 
 
@@ -126,9 +129,9 @@ The mongo provides easy sharding facility and use of `docker-compose` make the s
 * Fig 5: **Sharding configuration of MongoDB**
 
   
-### Performance Testing
+## Performance Testing
 
-#### 1. Data-Ingestor
+### 1. Data-Ingestor
 
 The `Confluent's` Kafka wrapper gives us nice UI to measure the response time and throughput. It also gives measure the failed requests. 
 
@@ -171,7 +174,7 @@ The request latency was again very quick with 99.9th percentile being 14ms, 95th
 ![cont_10_2](./images/10cont.png)
 * Fig 10: latency on 10 concurrent streams
 
-#### CoreDMS performance
+### CoreDMS performance
 
 We observed a general delay of 15-20 messages over the consumer statistics in kafka irrespective of whether 1 or 10 concurrent streams were running
 
@@ -180,8 +183,7 @@ We observed a general delay of 15-20 messages over the consumer statistics in ka
 
 Since, the messages are inserted into the mongo by the python code, new message is picked from kafka only after last item has been saved into the db. As this lag remained constantly at 15-20 messages, we can safely say that the data into the mongoDB was being inserted at the same rate that it was produced. Hence the values for insertion into our distributed DB will be (for all 1, 5, and 10 streams)
 : 
-> **Avg**: 1ms (Median value from the queue producer's data above) \
-> **Worst Case** : {(15 + 20)/2}*1.0ms = _17.5ms_  
+> **Avg**: {(15 + 20)/2}*1.0ms = _17.5ms_  
 
 Therefore, we were able to save data into the system between 1ms to 18ms almost even when the number of streams were 10. 
 
@@ -190,6 +192,37 @@ I didn't face the problem of performance during data ingestion due to combinatio
 * Presence of Kafka as mediator: Kafka queue was able to act as cushion between the originating requests and our database. So our db always received very steady and clear supply of incoming data. 
 
 However, I am certain that if there are around 100+ streams of data, I would start to see some lag between production and consumption. It will be because of hardware limitations and not because of software bottlenecks from Kafka or Sharded mongoDB instances. One quick method to remedy any such lag and failure of requests would be to deploy the code onto some public cloud platforms.  
+
+---
+
+## Part 3
+
+For service discovery we are using Consul for registering `mySimbdp-coredms` and the `data-ingestor`. Along with consul, we are also using `Registrator`[6] from Gliderlabs for automating the service discovery feature. Hence, after using this plugin for consul, we really don't need to provide any config file and the `Registrator` automatically picks up the discoverable containers currently running on the system.
+
+It not only registered mongoDB, `data-ingest` was also automatically detected and registered by it. 
+
+![consul_1](./images/consul_4.png)
+* Fig 12: All Registered Services with Consul on my local system
+
+![consul_2](./images/consul_6.png)
+* Fig 13: Sharded Mongo Instance registered with Consul
+
+1. In a multi-tenant architecture, where each tenant would have their own instance of sharded and replicated mongoDB instance, service registry using Consul, would make them discoverable as separate service. In the Fig 13, we can see that the Location of the mongo node is given as `Rohit-X406UAR` which is the name of my system. In a similar fashion, we would be able to detect the information of data using consul.
+
+![consul_3](./images/consul_7.png)
+* Fig 14: Kafka broker registered with Consul
+
+
+2. TO publish information about the data through a file, we will need to use the `Agent API` of consul [7]. The sample code has been implemented in the `/code/scripts/mysimbdp-coredms-servicediscovery/consul_add_service_manually.sh`. (Please note, it has not been containarized or included into any containers and is only for test purpose). It registers two mongo tenants manually using Agent API for consul. 
+
+3. My `simpbdp-ingestor` is already connected with two service discovery services. I connected it to Consul (see figure 14 above). And Kafka is pre-connected to Zookeeper when we use Conluent's Kafka image (See image 15 below). So we don't really need to change my design to incorporate the `mysimpbdp-ingestor`.
+
+![kafka_3](./images/kafka_3.png)
+* Fig 15: Kafka broker registered with Zookeeper
+
+
+
+
 
 
 
@@ -207,4 +240,7 @@ However, I am certain that if there are around 100+ streams of data, I would sta
 
 [5] [Here’s what makes Apache Kafka so fast](https://www.freecodecamp.org/news/what-makes-apache-kafka-so-fast-a8d4f94ab145/)
 
+[6] https://gliderlabs.com/registrator/latest/
+
+[7] https://www.consul.io/api/agent.html
 
