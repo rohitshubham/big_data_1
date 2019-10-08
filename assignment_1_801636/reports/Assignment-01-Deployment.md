@@ -4,7 +4,7 @@
 #### Rohit Raj - 801636
 ---
 
-This assignment has 3 basic components:
+This assignment has 4 components that we need to deploy:
 1. Mysimbdp-coredms
 2. Mysimbdp-ingestor
 3. Mysimbdp-daas
