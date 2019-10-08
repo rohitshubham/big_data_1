@@ -73,7 +73,7 @@ It is important to note here that this is the _only_ client facing app and can b
 
 Hence, the complete architecture can be seen in the image below (Figure 5):
 
-![Daas_1](./images/big_data_1.png)
+![Daas_1](./images/arch.png)
 * Fig 5: **MySimBDP architecture**
 
 ---
