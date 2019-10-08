@@ -2,7 +2,7 @@
 set -e
 
 #to build the dockerfile, use the following command
-# sudo docker build --tag mysimbdp-ingestor ../../../mysimbdp-ingestor/Data-ingestion-container/
+sudo docker build --tag mysimbdp-ingestor ../../../mysimbdp-ingestor/Data-ingestion-container/
 
 # to run use the following command
 sudo docker run --net=host  mysimbdp-ingestor

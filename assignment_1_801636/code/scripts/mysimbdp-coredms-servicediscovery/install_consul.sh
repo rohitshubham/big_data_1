@@ -1,5 +1,7 @@
-#!/binb/bash
+#!/bin/bash
+set -e
 
+# install the latest image of consul
 sudo docker run -d --name=dev-consul --net=host -e CONSUL_BIND_INTERFACE=eth0 consul
 
 #gliderLabs/registrator adds the service discovery using Consul

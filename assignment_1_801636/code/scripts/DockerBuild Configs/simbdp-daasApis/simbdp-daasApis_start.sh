@@ -2,7 +2,7 @@
 set -e
 
 #to build the dockerfile, use the following command
-# sudo docker build --tag mysimbdp-daas ../../../simple-daas/
+sudo docker build --tag mysimbdp-daas ../../../simple-daas/
 
 # to run use the following command
 sudo docker run --net=host  mysimbdp-daas
