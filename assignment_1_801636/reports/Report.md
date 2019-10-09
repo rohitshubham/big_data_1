@@ -1,7 +1,7 @@
 # Assignment report 1
 
 ### CS-E4640 Big data platforms 
-#### Rohit Raj - 801636
+#### Rohit Raj ([rohit.raj@aalto.fi](mailto:rohit.raj@aalto.fi)) - 801636
 ---
 ## Part 1
 ### Design of the project
