@@ -1,3 +1,15 @@
+commit f883b243d27ec027b057b6bc9a562db076f1e8e4
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Wed Oct 9 21:56:33 2019 +0300
+
+    Small and final update to the architecture image
+
+commit c014b78b7edabd18f5dffa7e0ac8106c10700bd7
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Wed Oct 9 21:39:40 2019 +0300
+
+    Rename report.md as per last update in the original repo
+
 commit fad11a00ea185db38487ce615006eb8e63eeb903
 Author: Rohit Raj <rohit.raj@aalto.fi>
 Date:   Wed Oct 9 21:36:29 2019 +0300
