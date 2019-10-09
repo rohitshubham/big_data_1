@@ -1,2 +1,201 @@
-the content of this file should be the output of the log of your own git project for this assignment
-using git log command to export your git log
+commit 59c00cc887278929e1771eeaa9f30aff1eb3ff0b
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Wed Oct 9 21:34:12 2019 +0300
+
+    Final cleanup of the folder and updating of the report.
+
+commit 96732247ee8774a31fb134c9123a45c7d6605097
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Wed Oct 9 17:20:33 2019 +0300
+
+    Updated the report
+
+commit c1d1f97fd2861919ec3ebbf5774f429cc41d6ba2
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Wed Oct 9 00:18:58 2019 +0300
+
+    Updated ddeployment report
+
+commit 6bc1491785962de17049cd557aa9e77681e1f488
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Wed Oct 9 00:17:14 2019 +0300
+
+    Updated the deployment report and main report too
+
+commit dbc8cf4fb84b6d58d1de0eda8f9e6cab4c26e309
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Wed Oct 9 00:16:57 2019 +0300
+
+    Edited self grading
+
+commit 09f77276f4e62f5da0e6faca8ef0db71da95e096
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Tue Oct 8 14:18:02 2019 +0300
+
+    updated the architecture image
+
+commit 0e0f7fb890884cf459323d210796c827a9006ed7
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Mon Oct 7 22:10:38 2019 +0300
+
+    Updated the report and part 3 is now done
+
+commit 61a16f4162771b78575c82852f8f27e4a5d485c2
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Mon Oct 7 21:21:40 2019 +0300
+
+    updated the report for part 3
+
+commit cd190d30a3020d840c8426c73233ec69af458cbc
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Mon Oct 7 21:21:24 2019 +0300
+
+    added some logs
+
+commit eeb65180db4070709e094e91168c1c2204f8475a
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Mon Oct 7 21:21:02 2019 +0300
+
+    added consul to project
+
+commit 8b53741fd34f98445dd5018ccf7e2308424c1fb8
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Mon Oct 7 19:28:30 2019 +0300
+
+    Added consul and Registrator for our service discovery
+
+commit 3b193730a18de3200cf7d16f7b70c32898b3cdab
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sun Oct 6 22:54:05 2019 +0300
+
+    Updated the report and completed section 2
+
+commit c8ab46d12c7a889b69310df02f676f02d4225bad
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sun Oct 6 22:09:05 2019 +0300
+
+    report updated with part 2
+
+commit 042d76802a885477b8298597b65521104de0da4e
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sun Oct 6 20:05:18 2019 +0300
+
+    Updated the report a bit more with answers from part 2
+
+commit 5ef1cc71d2cc9da48bc30ccd5d851fc5b7642634
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sun Oct 6 17:41:27 2019 +0300
+
+    complete part one of the assignment and report
+
+commit 59ecbdee955640b4f0799c0da6e1f18067927a0b
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sun Oct 6 16:46:59 2019 +0300
+
+    Updated the reposrt with some images
+
+commit 48b114bbbc179bb873ed81bd0e3ec2ec25ea73ed
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sat Oct 5 23:28:32 2019 +0300
+
+    Updated some more report and added images
+
+commit e925db2f903400385b6cb5113bbbee288e74bac1
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sat Oct 5 21:27:51 2019 +0300
+
+    Started writing the report
+
+commit 3b72aea793ba76160585bd17221ceed9ca6e451c
+Merge: 1db6e59 3bee421
+Author: Raj Rohit <rohit.raj@aalto.fi>
+Date:   Fri Oct 4 23:43:58 2019 +0300
+
+    Merge branch 'simple-daas' into 'master'
+    
+    creating the simple daas and the docker file
+    
+    See merge request rajr1/assignment_1_801636!3
+
+commit 3bee4212639281ee46224b2c5f8b82c60b68f625
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Fri Oct 4 23:42:29 2019 +0300
+
+    Create the docker build file for this mysimbdp-coredms
+
+commit 9447fe042392c1cace334b812e6ec1bc2025742a
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Fri Oct 4 23:42:00 2019 +0300
+
+    Create the simple-daas RestfulAPI's to call the mysimpbdp-coredms for external users
+
+commit 1db6e59c2ff7a4dcdf046628347ddb7561df1118
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Fri Oct 4 01:28:48 2019 +0300
+
+    Enable sharding in mongodb using docker-compose
+    plus rearrange the logs and add new logs
+
+commit 33c0c9122c55bb96c6ea460750a2fc6acbf1c50c
+Merge: ddf43a1 5ff3209
+Author: Raj Rohit <rohit.raj@aalto.fi>
+Date:   Thu Oct 3 22:11:38 2019 +0300
+
+    Merge branch 'log_stuff' into 'master'
+    
+    Adding some logs in the directory
+    
+    See merge request rajr1/assignment_1_801636!2
+
+commit 5ff32092994235f61d4031a59bcf8e18ccc8c4d4
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Thu Oct 3 22:10:40 2019 +0300
+
+    Adding some logs in the directory
+
+commit ddf43a1a77ee3217fe4ba0df3031e12cf4df8d7e
+Merge: d9aa386 4d748f3
+Author: Raj Rohit <rohit.raj@aalto.fi>
+Date:   Thu Oct 3 21:43:41 2019 +0300
+
+    Merge branch 'database_stuff' into 'master'
+    
+    First PR: Database stuff
+    
+    See merge request rajr1/assignment_1_801636!1
+
+commit 4d748f3dfb357dba4398b16b7a62b714e20b1094
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Thu Oct 3 21:41:11 2019 +0300
+
+    Adding the data ingestor to a dockerfile and reorganization of some stuff
+
+commit a60916450710c9a1cf002691fc13172c3094b8d2
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Tue Oct 1 21:25:06 2019 +0300
+
+    extracting the data from kafka queue and inserting the data into mongoDB + plus add data.csv
+
+commit 2ee92756f779fc5a6cf3aea5936ca33f40521bf5
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Mon Sep 30 22:41:40 2019 +0300
+
+    adding the docker-compose.yml file for kafka. PLus some basic scripts in python for publishing and consuming on a test topic
+
+commit bf27b0589712e49a0debc6924211d7f4d43892ff
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sat Sep 28 23:42:45 2019 +0300
+
+    Intial python Code for saving into the database
+
+commit 9602cf18cd2792078c0a7043cc3bcad1de15341a
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sat Sep 28 19:25:56 2019 +0300
+
+    Adding script for installing docker and mongodb image
+
+commit d9aa386ce059c3be4539c407cea714900bdfa8ea
+Author: Rohit Raj <rohit.raj@aalto.fi>
+Date:   Sat Sep 28 18:52:01 2019 +0300
+
+    First commit after forking the original repo
