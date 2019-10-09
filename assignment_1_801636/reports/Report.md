@@ -193,11 +193,13 @@ I didn't face the problem of performance during data ingestion due to combinatio
 
 However, I am certain that if there are around 100+ streams of data, I would start to see some lag between production and consumption. It will be because of hardware limitations and not because of software bottlenecks from Kafka or Sharded mongoDB instances. One quick method to remedy any such lag and failure of requests would be to deploy the code onto some public cloud platforms.  
 
+Also, I pushed around 3.6Gbs of data into the 3 shards. The data was distributed on the hashed key onto the 3 shards and the performance was not affected during reads or writes. The reads were quick due to indexing on the objectID. Again, I am sure if we keep adding the data, we would hit the bottleneck mainly cause of hardware limitations of a personal computer. To mitigate it, we should change the storage to cloud and add more shards. Additionally, a carefully chosen indexing scheme would always improve the performance.
+
 ---
 
 ## Part 3
 
-For service discovery we are using Consul for registering `mySimbdp-coredms` and the `data-ingestor`. Along with consul, we are also using `Registrator`[6] from Gliderlabs for automating the service discovery feature. Hence, after using this plugin for consul, we really don't need to provide any config file and the `Registrator` automatically picks up the discoverable containers currently running on the system.
+For service discovery we are using Consul for registering `mySimbdp-coredms` and the `data-ingestor`. Along with consul, we are also using `Registrator`[6] from Gliderlabs for automating the service discovery feature. Hence, after using this plugin for consul, we really don't need to provide any config file and the `Registrator` automatically picks up the discoverable containers currently running on the system. 
 
 It not only registered mongoDB, `data-ingest` was also automatically detected and registered by it. 
 
@@ -213,9 +215,9 @@ It not only registered mongoDB, `data-ingest` was also automatically detected an
 * Fig 14: Kafka broker registered with Consul
 
 
-2. To publish information about the data through a file, we will need to use the `Agent API` of consul [7]. The sample code has been implemented in the `/code/scripts/mysimbdp-coredms-servicediscovery/consul_add_service_manually.sh`. (Please note, it has not been containarized or included into any containers and is only for test purpose). It registers two mongo tenants manually using Agent API for consul. 
+2. To publish information about the data through a file, we will need to use the `Agent API` of consul [7]. The sample code has been implemented in the `/code/scripts/mysimbdp-coredms-servicediscovery/consul_add_service_manually.sh`. (Please note, it has not been containerized or included into any containers and is only for test purpose). It registers two mongo tenants manually using Agent API for consul. 
 
-3. My `simpbdp-ingestor` is already connected with two service discovery services. I connected it to Consul (see figure 14 above). And Kafka is pre-connected to Zookeeper when we use Conluent's Kafka image (See image 15 below). So we don't really need to change my design to incorporate the `mysimpbdp-ingestor`.
+3. My `simpbdp-ingestor` is already connected with two service discovery services. I connected it to Consul (see figure 14 above). And **Kafka is pre-connected to Zookeeper** when we use Conluent's Kafka image (See image 15 below). So we don't really need to change my design to incorporate the `mysimpbdp-ingestor`.
 
 ![kafka_3](./images/kafka_3.png)
 * Fig 15: Kafka broker registered with Zookeeper

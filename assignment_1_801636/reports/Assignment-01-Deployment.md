@@ -11,7 +11,7 @@ This assignment has 4 components that we need to deploy:
 4. Consul for service discovery
 
 
-We will deploy the assignment in the same serial as above. Also, you will need root access to install components and run docker.
+We will deploy the assignment in the same serial as above. Also, you will need root access to install components and run docker. All the docker images are by default pulled from `docker-hub` and run on `tag:latest`.
 
 
 ## 1.Mysimbdp-coredms
